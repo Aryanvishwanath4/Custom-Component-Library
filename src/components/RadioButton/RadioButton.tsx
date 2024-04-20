@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
-import { CheckBoxProps } from "./CheckBox.types";
+import { RadioButtonProps } from "./RadioButton.types";
 
-export const CheckBox = ({ label, id, checked, disabled }: CheckBoxProps) => {
+export const RadioButton = ({
+  label,
+  id,
+  checked,
+  disabled,
+}: RadioButtonProps) => {
   const [isChecked, setIsChecked] = useState<boolean | undefined>(checked);
   useEffect(() => {
     setIsChecked(checked);
@@ -21,7 +26,7 @@ export const CheckBox = ({ label, id, checked, disabled }: CheckBoxProps) => {
         id={id}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        type="checkbox"
+        type="radio"
         style={{
           width: "16px",
           height: "16px",
