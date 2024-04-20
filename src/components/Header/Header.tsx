@@ -1,18 +1,7 @@
 import React from 'react';
-
+import { HeaderProps } from './Header.types';
 import { Button } from '../Button/Button';
 import './header.css';
-
-type User = {
-  name: string;
-};
-
-interface HeaderProps {
-  user?: User;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
-}
 
 export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
